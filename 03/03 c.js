@@ -51,7 +51,7 @@ else if (command == "write") {
     let txt = "salam";
     let body = (yyy(txt));
 
-    fs.writeFile("./date.txt", JSON.stringify(body), function (err) {
+    fs.writeFile("./date.txt", JSON.stringify("body"), function (err) {
         if (err) {
             console.log("file not save");
         } else {

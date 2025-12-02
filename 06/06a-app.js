@@ -1,4 +1,4 @@
-import {use,start,write} from "./05b-httpfreamwork.js";
+import {use,start,write} from "./06a-framework.js";
 import {readFile,writeFile} from "fs";
 
 
@@ -32,6 +32,14 @@ use("file",function(request,response){
             write(response,200,data);
         }
       });
+})
+
+use("sum",function(request,response){
+let urlArray = request.url.split('/');
+let inputs= urlArray.slice(2);
+
+write(response,404,'sum:'+(Number(inputs[0])+Number(inputs[1])))
+
 })
 
 
